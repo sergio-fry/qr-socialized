@@ -7,8 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <strong><a href="/">QR Сеть</a></strong>
+  | <%= link_to 'Создать страницу', new_page_path %>
+  <hr />
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>
