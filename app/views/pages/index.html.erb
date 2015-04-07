@@ -2,23 +2,10 @@
 
 <h1>Последние добавления</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Заголовок</th>
-      <th>Дата</th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @pages.each do |page| %>
-      <tr>
-        <td><%= link_to page.title, page %></td>
-        <td><%= page.created_at %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @pages.each do |page| %>
+  <%= link_to qr_code_for(page_url(page)), page, :title => page.title %>
+<% end %>
 
 <br>
 
